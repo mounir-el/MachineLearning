@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Input datas</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+
+      <h1 >
+         Saisir des notes pour évaluer l'admission : 
+
+      </h1>
+      <br>
+      
+      <form action = "/prediction" method = "POST">
+        <p>GRE <input type = "number" name = "gre" /></p>
+        <p>SOP <input type = "number" name = "sop" /></p>
+        <p>CGPA <input type = "number" name = "cgpa" /></p>
+        <p>Classes GRE <input type = "number" name = "classes_gre" /></p>
+        <p><input type = "submit" value = "GO" /></p>
+      </form>
+
+      <!--<button><a href="entrainement">Entrainement</a></button>-->
+      
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+
+
+  </body>
+</html>
